@@ -17,7 +17,7 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -28,6 +28,10 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
            
         }
+        
+        let separatorLineView = UIView(frame: CGRectMake(0,0,320,1))
+        separatorLineView.backgroundColor = UIColor.grayColor()
+        cell.contentView.addSubview(separatorLineView)
         return cell
     }
     
